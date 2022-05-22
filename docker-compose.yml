@@ -1,0 +1,10 @@
+version: '3'
+services:
+  staticsite:
+    image: pmi-moscow-landing
+    build: .
+    container_name: pmi-moscow-site
+    restart: always
+    ports:
+      - "80:80"
+      - "443:443"
