@@ -2,7 +2,6 @@ version: '3'
 
 services:
   web:
-    image: pmi-moscow-landing
     build: .
     container_name: pmi-moscow-site
     restart: always
@@ -10,7 +9,7 @@ services:
       - "80"
       - "443"
     environment:
-      - VIRTUAL_HOST=pmi.moscow,www.pmi.moscow
+      - VIRTUAL_HOST=pmi.moscow,www.pmi.moscow,media.pmi.moscow
       - VIRTUAL_PORT=443
       - VIRTUAL_PROTO=https
 
