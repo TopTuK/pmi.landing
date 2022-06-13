@@ -1,4 +1,4 @@
-version: '3'
+version: '3.8'
 
 services:
   web:
@@ -9,11 +9,10 @@ services:
       - "80"
       - "443"
     environment:
-      - VIRTUAL_HOST=pmi.moscow,www.pmi.moscow,media.pmi.moscow
+      - VIRTUAL_HOST=pmi.moscow,www.pmi.moscow
       - VIRTUAL_PORT=443
       - VIRTUAL_PROTO=https
 
 networks:
   default:
-    external:
-      name: pmi_network
+    name: pmi_network
